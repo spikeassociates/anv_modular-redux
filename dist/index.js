@@ -1619,7 +1619,7 @@ var createModule = function createModule(_ref) {
     var feature = bind(ft, modFeature, Module);
     var rootFeature = combine(ft, feature, depFeature, Module);
     return _extends({}, Module, rootFeature);
-  }, { name: name, instance: name + "_" + (0, _utils.getId)() });
+  }, { name: name, instance: name + "_" + (0, _utils.genId)() });
 
   return Module;
 };

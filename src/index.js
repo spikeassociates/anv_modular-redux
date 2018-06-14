@@ -1,4 +1,4 @@
-import { getId, uniq } from "utils";
+import { genId, uniq } from "utils";
 
 import { getCustomFeatures, getFeatures, getFeatureFn } from "./features";
 
@@ -47,7 +47,7 @@ const createModule = ({ name = "module", ...features }, custom = []) => {
       let rootFeature = combine(ft, feature, depFeature, Module);
       return { ...Module, ...rootFeature };
     },
-    { name, instance: name + "_" + getId() }
+    { name, instance: name + "_" + genId() }
   );
 
   return Module;
