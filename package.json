@@ -7,9 +7,9 @@
   },
   "author": "Andi Ndrecka",
   "dependencies": {
-    "utils": "git+ssh://git@bitbucket.org:andi_ndrecka/utils.git",
     "react": "^16.2.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "utils": "git+ssh://git@bitbucket.org:andi_ndrecka/utils.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
