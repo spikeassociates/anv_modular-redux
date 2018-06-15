@@ -1,4 +1,7 @@
-const binder = (wrapper, mod) => ({ [mod.instance]: wrapper(mod.instance, mod.actions) });
+const binder = (wrapper, mod) => ({
+  _module: wrapper(mod.instance, mod.actions),
+  _instance: () => mod.instance
+});
 const fallback = mod => {};
 
 export { fallback };

@@ -1,8 +1,11 @@
 import { providerWrapper } from "./wrapper";
 
-const combiner = (mod, deps, Module) => ({
-  views: deps,
-  view: providerWrapper(mod, { ...Module, views: deps })
-});
+const combiner = (mod, deps, Module) => {
+  const view = providerWrapper(mod, { ...Module, view: deps });
+  Object.entries(deps).forEach(([key, val]) => {
+    view[key] = val;
+  });
+  return ({ view });
+}
 
 export default combiner;

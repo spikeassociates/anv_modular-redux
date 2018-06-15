@@ -53,13 +53,13 @@ const createModule = ({ name = "module", ...features }, custom = []) => {
   return Module;
 };
 
-const Module = createModule;
+const Modular = createModule;
 const internalFeatures = getFeatures();
 const internalWrappers = getFeatureFn(internalFeatures, "wrapper");
 
-Module.actions = internalWrappers.actions;
-Module.reducer = internalWrappers.reducers;
-Module.selectors = internalWrappers.selectors;
-Module.view = internalWrappers.views;
+Modular.actions = internalWrappers.actions;
+Modular.reducer = internalWrappers.reducers;
+Modular.selectors = internalWrappers.selectors;
+Modular.view = internalWrappers.views;
 
-export default Module;
+export default Modular;
