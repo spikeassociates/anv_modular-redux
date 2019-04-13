@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "^16.2.0",
     "redux": "^3.7.2",
-    "utils": "https://github.com/spikeassociates/anv_JSUtils.git"
+    "utils": "spikeassociates/anv_JSUtils"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
